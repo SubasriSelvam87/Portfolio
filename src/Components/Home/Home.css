@@ -1,0 +1,216 @@
+.home-wrapper {
+    display: flex;
+    flex-direction: column;
+    /* align-items: start; */
+    justify-content: start;
+    /* width: 100%; */
+    height: 100%;
+    color: rgb(13, 13, 13);
+    position: relative;
+    z-index: 1;
+    /* padding-top: 1% !important; */
+    /* padding: 8%; */
+    /* margin-bottom: 0; */
+    text-align: center;
+  font-family: "Nova Square", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+
+.greeting {
+    font-size: 2rem;
+    opacity: 0;
+    transform: translateX(60px) scale(0.95);
+    animation: slideFadeScaleRight 6s ease-in-out;
+    position: relative;
+    z-index: 2;
+}
+
+.title {
+    font-size: 2rem;
+    position: relative;
+
+    margin: 0.5rem 0;
+}
+
+
+.subTitle {
+    /* font-size: medium !important; */
+    color: rgb(23, 23, 23);
+    position: relative;
+}
+
+.subTitle2 {
+    color: rgb(15, 15, 15);
+    position: relative;
+}
+
+
+
+@keyframes slideFadeScaleRight {
+    0% {
+        opacity: 0;
+        transform: translateX(60px) scale(0.95);
+    }
+
+    20% {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
+
+    80% {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateX(-30px) scale(0.95);
+    }
+}
+
+
+
+
+
+
+
+.home-btn {
+
+    font-family: "Nova Square", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* .connect-btn {
+    border: 1px solid black !important;
+}
+.Resume-btn{
+    border: 1px solid black !important;
+    
+} */
+
+.connect-btn {
+  margin: 0.5em;
+  background-color: rgba(61, 63, 64, 0.768) !important;
+  color: white !important;
+  border: 1px solid transparent; 
+  border-radius: 0.625em;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  transition: color 0.3s, border-color 0.3s; 
+}
+
+.connect-btn:hover {
+  /* border-color: white;  */
+  color: black !important;
+}
+
+.connect-btn:after {
+  content: "";
+  background: rgb(120, 192, 247);
+  position: absolute;
+  z-index: -1;
+  left: -20%;
+  right: -20%;
+  top: 0;
+  bottom: 0;
+  transform: skewX(-45deg) scale(0, 1);
+  transition: transform 0.5s;
+}
+
+.connect-btn:hover:after {
+  transform: skewX(-45deg) scale(1, 1);
+}
+
+
+  .connect-icon {
+  padding: 6px;
+  background-color: rgba(51,53,55,0.83);
+  color: white !important;
+  border-radius: 50px;
+  width: 40px;
+  height: 40px;
+}
+
+.connect-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+   /* .connect-icon {
+   margin: 0.5em;
+   background-color: rgba(61, 63, 64, 0.768) !important;
+   color: white !important;
+   border: none;
+   font-weight: bold;
+   cursor: pointer;
+   position: relative;
+   z-index: 1;
+   overflow: hidden;
+  } */
+
+  .connect-icon:hover {
+    border:1px solid white;
+   background-color: rgb(120, 192, 247) !important;
+   color: black !important;
+  }
+
+/* animation */
+
+.animated-text {
+  display: inline-block;
+  margin: 0 auto;
+  text-shadow: 0 0 80px rgba(255, 255, 255, 0.5);
+
+  /* Clip Background Image */
+  background: url("../../Assets/font.jpg") repeat-x; /* horizontal repeat */
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  /* Transparent text so background shows */
+  -webkit-text-fill-color: transparent;
+
+  /* Animate Background Image */
+  animation: aitf 20s linear infinite;
+
+  /* Smoother animation */
+  -webkit-transform: translate3d(0,0,0);
+  -webkit-backface-visibility: hidden;
+}
+
+@keyframes aitf {
+  0% { background-position: 0 50%; }
+  100% { background-position: 1000px 50%; } /* move horizontally */
+}
+
+
+
+@media (max-width: 428px) {
+.greeting{
+    font-size: larger !important;
+}
+.title{
+    font-size: 1.8rem !important;
+
+}
+.subTitle2{
+    font-size: 1.8rem !important;
+
+}
+.connect-btn{
+    font-size: 10px !important;
+
+}
+  .connect-icon {
+    width: 30px;
+    height: 30px;
+    padding: 4px;
+  }
+}

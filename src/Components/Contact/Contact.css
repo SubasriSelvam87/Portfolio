@@ -1,0 +1,99 @@
+/* Overlay */
+.contact-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.contact-overlay.fade-in {
+  opacity: 1;
+}
+
+.contact-overlay.fade-out {
+  opacity: 0;
+}
+
+/* Modal with slide effect */
+.contact-modal {
+  max-width: 500px;
+  width: 90%;
+  padding: 2rem 1rem;
+  border-radius: 12px;
+  position: relative;
+  background: rgba(61, 159, 224, 0.4);
+  backdrop-filter: blur(8px);
+  color: #fff;
+  transform: translateY(50px) scale(0.9);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 0;
+}
+
+.contact-overlay.fade-in .contact-modal {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+}
+
+.contact-overlay.fade-out .contact-modal {
+  transform: translateY(50px) scale(0.9);
+  opacity: 0;
+}
+
+/* Close button */
+.contact-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #fff;
+}
+
+/* Fields */
+.contact-field {
+  margin-bottom: 1rem;
+}
+
+.contact-field input,
+.contact-field textarea {
+  background-color: transparent;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-bottom: 1px solid white;
+  color: white;
+}
+
+.contact-error {
+  color: red;
+  font-size: 0.8rem;
+}
+
+.contact-submit {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid white;
+  background-color: #32577d;
+  color: #fff;
+  cursor: pointer;
+}
+.contact-field input::placeholder {
+  color: rgba(255, 255, 255, 0.6); /* change color as needed */
+  opacity: 1; /* makes sure it's fully visible in some browsers */
+}
+
+.contact-field textarea::placeholder {
+  color: rgba(255, 255, 255, 0.6); /* change color as needed */
+  opacity: 1; /* makes sure it's fully visible in some browsers */
+}

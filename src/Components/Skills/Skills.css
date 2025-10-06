@@ -1,0 +1,146 @@
+
+
+.Skillpro-navbar-links {
+    cursor: pointer;
+    color: rgb(245, 243, 243);
+    font-weight: 900;
+    border: none;
+    background-color: #0d8ca2d6;
+    border-radius: 10px;
+    padding: 0.8rem;
+width: fit-content;
+
+}
+
+
+.skills-wrapper {
+    width: 100%;
+    position: relative;
+    height:auto;
+    /* adjust as needed */
+}
+
+.skill-section {
+    /* background-image: url("../../Assets/background.jpg");
+    background-repeat: no-repeat;
+    background-position: fixed;
+    background-size: 100%; */
+
+
+  /* -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */
+  /* font-family: "Jura", sans-serif;
+  font-optical-sizing: auto; */
+  /* font-weight: <weight>; */
+   
+    width: 100%;
+    color: white;
+    /* padding: 20px; */
+    box-sizing: border-box;
+    /* background: linear-gradient(145deg, #1a1a28, #151520); */
+}
+
+.Skillpro {
+  position: relative;
+  width: 100%;
+  /* min-height: 100vh; */
+  background: #C0DEED
+    url("../../Assets/g.png") repeat-x;
+  background-size: 100% auto;  /* smaller repeat so clouds look sharper */
+  animation: awan-animasi 120s linear infinite; /* slower drift */
+  overflow: hidden;
+}
+
+/* Animate background clouds */
+@keyframes awan-animasi {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 2000px 0; /* move clouds slowly */
+  }
+}
+
+
+.skill-items span {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid #7d7b7b;
+  border-radius: 6px;
+  padding: 6px 10px;
+  margin: 4px;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.skill-items span svg {
+  margin-right: 6px;
+  transition: transform 0.3s ease;
+}
+
+.skill-items span:hover {
+  background-color: #c9d4dd; /* light blue */
+  border-color: #262829;     /* blue border */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  transform: translateY(-2px);
+}
+
+.skill-items span:hover svg {
+    color: #0897b0ea;
+  transform: scale(1.2); /* icon grows slightly */
+}
+.Skillpro-box{
+  font-weight: bold !important;
+  color: #060606 !important;
+  /* border:none !important; */
+  background-color: rgba(145, 199, 241, 0.729) !important;
+  transition: all 0.3s ease;
+
+}
+.Skillpro-box:hover{
+  border:1px solid #070707 !important;
+
+   color: #060606 !important;
+  transform: translateY(-10px);
+  background-color: #e7eaec !important;
+
+}
+.Skillpro-svg-box{
+  background-color: rgba(145, 199, 241, 0.729) !important;
+
+}
+
+@media (max-width: 480px) {
+.Skill-navbar-links{
+   gap: 0 !important;
+
+}
+.Skill-navbar-links li span{
+font-size: 10px !important; 
+}
+.Skill-navbar-links li{
+border-radius: 0;
+border: 1px solid grey;
+}
+.Skill-navbar-links li.active{
+border-radius: 0;
+
+}
+}
+
+/* Initial hidden state */
+.hide {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.6s ease-in-out;
+}
+
+/* Visible state */
+.show {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.6s ease-in-out;
+}
+
+

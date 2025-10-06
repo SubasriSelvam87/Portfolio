@@ -1,0 +1,41 @@
+.App {
+  /* background: rgb(242, 239, 238); */
+  /* font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+  font-family: "Jura", sans-serif !important;
+  font-optical-sizing: auto;
+  /* font-weight: <weight>; */
+  font-style: normal;
+
+  /* font-family: "Original Surfer", sans-serif;
+  font-weight: 400;
+  font-style: normal; */
+}
+
+
+/* Works on Chrome, Edge, Safari */
+::-webkit-scrollbar {
+  width: 10px;              /* width of vertical scrollbar */
+  height: 10px;             /* height of horizontal scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1); /* track color */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #6faef1, #1b1b3a); /* scrollbar color */
+  border-radius: 10px;
+  border: 2px solid transparent; /* adds spacing around */
+  background-clip: content-box;   /* keeps gradient inside */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #4f93d2, #0f0f25);
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;                /* auto | thin */
+  scrollbar-color: #6faef1 #b8b9b9;     /* thumb | track */
+}

@@ -1,0 +1,267 @@
+/* .project-container{
+    padding-left: 7rem;
+    padding-right: 7rem;
+
+ */
+/* } */
+.zero-one {
+  color: rgb(208, 233, 251); /* Fill color */
+  font-size: 150px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  -webkit-text-stroke: 2px black; /* Outline thickness & color */
+}
+.hastin-card{
+    font-weight: bold;
+    clip-path: polygon(30px 0%, 100% 0, 100% calc(100% - 30px), calc(100% - 30px) 100%, 0 100%, 0% 30px);
+transition: all 0.3s ease;
+    /* border-bottom-right-radius: 50px;
+    border-top-left-radius: 50px; */
+    background-color: #68a5b6d1;
+}
+.hastin-card:hover{
+    background-color: #e1e8ead1;
+  transform: scale(1.05);
+
+}
+
+.hastin-tech {
+  display: flex;
+  flex-direction: column; /* keep title above tags */
+  background-color: rgb(226, 238, 250);
+  /* border-radius: 6px; */
+  /* padding: 10px; */
+}
+
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 6px;
+}
+
+.tech {
+  background: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 5px 12px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.tech:hover {
+  background: #767879;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+
+.project-btn{
+  background-color: #72c6f0 !important;
+}
+.project-btn:hover{
+  background-color: #686868 !important;
+  color: #fff !important;
+}
+
+/* Card & Preview */
+.project-card {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  text-align: center;
+  /* padding: 15px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: auto; /* auto adjusts for content */
+}
+
+.preview-img {
+  padding: 10px;
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  filter: blur(4px) brightness(0.9);
+  transition: all 0.3s ease;
+}
+
+.preview-img:hover {
+  filter: blur(2px) brightness(1);
+}
+
+/* Modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  z-index: 1000;
+  overflow-y: auto;
+}
+
+.modal-content {
+  position: relative;
+  width: 95%;
+  max-width: 900px;
+  text-align: center;
+}
+
+/* Slider Image */
+.slider-img {
+  width: 100%;
+  height: auto;
+  max-height: 80vh;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+/* Arrows */
+.btn-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  padding: 8px 14px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 5;
+}
+
+.btn-nav.left {
+  left: 5px;
+}
+
+.btn-nav.right {
+  right: 5px;
+}
+
+/* Dots */
+.dots {
+  margin-top: 12px;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.dot {
+  height: 12px;
+  width: 12px;
+  background-color: #bbb;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dot.active {
+  background-color: #38ade7;
+}
+
+/* Close button */
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  border: none;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  z-index: 5;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .zero-one{
+     font-size: 120px;
+  }
+  .slider-img {
+    max-height: 60vh;
+  }
+
+  .btn-nav {
+    font-size: 1.2rem;
+    padding: 6px 10px;
+  }
+
+  .modal-close {
+    width: 30px;
+    height: 30px;
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .zero-one{
+    text-align: center;
+  }
+  .slider-img {
+    max-height: 50vh;
+  }
+
+  .btn-nav {
+    font-size: 1rem;
+    padding: 5px 8px;
+  }
+
+  .modal-close {
+    width: 28px;
+    height: 28px;
+    font-size: 1rem;
+  }
+}
+
+
+.animated-project-text {
+  display: inline-block;
+  margin: 0 auto;
+  text-shadow: 0 0 80px rgba(255, 255, 255, 0.5);
+
+  /* Clip Background Image */
+  background: url("../../Assets/project-bg.jpg") repeat-x; /* horizontal repeat */
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  /* Transparent text so background shows */
+  -webkit-text-fill-color: transparent;
+
+  /* Animate Background Image */
+  animation: aitf 20s linear infinite;
+
+  /* Smoother animation */
+  -webkit-transform: translate3d(0,0,0);
+  -webkit-backface-visibility: hidden;
+}
+
+
+.card-animate {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease-out;
+}
+
+.card-animate.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.card-animate.hide {
+  opacity: 0;
+  transform: translateY(50px);
+}

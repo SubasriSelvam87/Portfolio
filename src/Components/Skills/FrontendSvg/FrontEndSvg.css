@@ -1,0 +1,14 @@
+/* Restrict speedometer inside its card */
+.frontend-svg {
+  width: 100% !important;    /* make it scale with the card */
+  max-width: 280px;          /* prevent it from overflowing */
+  margin: 0 auto;            /* center it */
+  display: block;
+}
+
+/* Tablet specific adjustment */
+@media (min-width: 769px) and (max-width: 1400px) {
+  .frontend-svg {
+    max-width: 20px !important; /* slightly smaller on tablets */
+  }
+}
